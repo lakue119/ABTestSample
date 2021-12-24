@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "707543114025",
+    "project_id": "abtestsample-a16a0",
+    "storage_bucket": "abtestsample-a16a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707543114025:android:2b6591950694902f9d9738",
+        "android_client_info": {
+          "package_name": "com.lakue.abtestsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707543114025-vpq7ss4hcu8s823q7omkgv19ihgfk33q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2z02pxlhTS0qyQoLt5N70IlhQGrMhnpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707543114025-vpq7ss4hcu8s823q7omkgv19ihgfk33q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
