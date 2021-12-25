@@ -3,6 +3,9 @@ package com.lakue.abtestsample
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.TextView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.installations.FirebaseInstallations
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -12,7 +15,7 @@ import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 
 class MainActivity : AppCompatActivity() {
 
-    val TAG = "Installations"
+    val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +31,20 @@ class MainActivity : AppCompatActivity() {
         remoteConfig.fetchAndActivate()
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    val btnSnack = findViewById<TextView>(R.id.btnSnack)
+                    val btnFloating = findViewById<FloatingActionButton>(R.id.btnFloating)
+
                     val data = remoteConfig.getString("button_style")
-                    Log.d(TAG, "Config params updated: $data")
+                    when(data){
+                        "floating_button" -> {
+                            btnSnack.visibility = View.GONE
+                            btnFloating.visibility = View.VISIBLE
+                        }
+                        "snack_button" -> {
+                            btnSnack.visibility = View.VISIBLE
+                            btnFloating.visibility = View.GONE
+                        }
+                    }
                 } else {
                     Log.d(TAG, "Fail")
                 }

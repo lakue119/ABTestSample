@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/btnSnack"
         android:visibility="gone"
         android:textColor="@color/white"
         android:background="#444444"
@@ -19,6 +20,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFloating"
         android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
